@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>Prachi</title>
+    <style>
+        body {
+            background-image: url(https://blog.prezi.com/wp-content/uploads/2019/03/jason-leung-479251-unsplash.jpg);
+        }
+
+        #logo {
+            background-color: black;
+            color: aqua;
+            width: 50px;
+            font-size: 18px;
+            size: bold;
+            text-decoration: dotted;
+            margin-top: 35%;
+            margin-left: 95%;
+        }
+
+        #login {
+            box-sizing: content-box;
+            padding: 20px;
+            height: 100;
+            width: 250px;
+            margin-top: 50px;
+            margin-left: 600px;
+            box-shadow: 2px;
+            border-radius: 2px;
+            background-color: rgba(190, 186, 186, 0.651);
+        }
+        #btn{
+            background-color:slateblue;
+            margin-left: 100px;
+            margin-top: 10px;
+        }
+        .inpt{
+            border-radius: 5px;
+            border: 0px;
+            box-shadow:5px;
+            margin: 5px;
+            height: 25px;
+            width: 170px;
+            
+        }
+    </style>
+    <script>
+        function auth() {
+            var a = document.getElementById("usr");
+            var b = document.getElementById("pswd");
+            if ((a.value == "Prachi") && (b.value == "Prachi@2000"))
+            {
+                alert("Login Approved.");
+                window.location.replace = "https://sites.google.com/view/prachi123";
+            }
+            else
+            {
+                alert("Login Denied.");
+                a.value = "";
+                b.value = "";
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="margin-left: 46%;">Login:</h1>
+    <div id="login">
+        <form action="https://sites.google.com/view/prachi123">
+            <table>
+                <tr>
+                    <td><span>User Id</span></td>
+                    <td><input type="text" class="inpt" placeholder="Username" id="usr" required></input></td>
+                </tr>
+                <tr>
+                    <td><span>Password</span></td>
+                    <td><input type="password" class="inpt" placeholder="Password" id="pswd" required></input></td>
+                </tr>
+            </table>
+            <button type="submit" id="btn" onclick="auth()">Login</button>
+        </form>
+        
+    </div>
+    <div>
+        <p id="logo">Prachi</p>
+    </div>
+
+</body>
+
+</html>
